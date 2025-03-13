@@ -4,7 +4,7 @@
 
 ## About
 
-This is a console-based Student Management System, which is a simple application designed to manage student records, including creating, updating, and deleting student information. Additionally, it allows for the assignment of courses to students, inserting student marks, calculating GPA, and viewing available courses and departments.
+This is a console-based Student Management System (My small effort), which is a simple application designed to manage student records, including creating, updating, and deleting student information. Additionally, it allows for the assignment of courses to students, inserting student marks, calculating GPA, and viewing available courses and departments.
 
 ### Key functionalities of this Student Management System include:
 
@@ -43,35 +43,3 @@ Overall, this Student Management System serves as a basic tool for managing stud
 3. Open the project in Visual Studio Code
 4. Install C# Dev Kit
 5. Run the project
-
->[!Note]
->You can also use Visual Studio _or_ your favorite IDE to run this project.
-
-## Error Handling
-
-- Be patient. Wait for all packages to be restored.  
-  All packages will be restored in the project root folder.
-- **Microsoft.Data.SqlClient** _error_  
-  If packages are not restored automatically, then run `dotnet restore` _or_
-  Download the `Microsoft.Data.SqlClient` package from `https://www.nuget.org/packages/Microsoft.Data.SqlClient` _or_ from the `terminal`, run `dotnet add package Microsoft.Data.SqlClient`.
-- **SQL Server** _error_
-  - Check your SQL Server connection.
-  - Configure your SQL Server connection.
-    ```text
-    localhost ip-----OR----enable any existing ip from SQL
-    Server (2022) Configuration manager\SQL Server Network
-    Configuration\protocols For SQLEXPRESS(instance name)\
-    TCP/IP\properties\protocol(enabled)\IP Address
-    ```
-    ```text
-    port = "51609"; // The port, configured in SQL Server Configuration Manager
-    ```
-    _OR_
-    Change `connectionString` in `Program.cs` file.  
-
-    ```cs
-    // connectionString = "Data Source=InstanceName;Initial Catalog=StudentManagementSystem;Integrated Security=True;Encrypt=False";
-    
-    // Database connection string
-    static string connectionString = "Data Source=localhost,51609;Initial Catalog=StudentManagementSystem;Integrated Security=True;Encrypt=False";
-    ```
